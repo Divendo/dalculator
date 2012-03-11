@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+ <head>
+  <title>Dalculator - Nederlands helpdocument</title>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="../style/main.css" />
+ </head>
+ <body>
+  <div id="page">
+   <h1>Dalculator - Help</h1>
+   <ul id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="calc.html">Berekenen</a></li>
+    <li><b>Vars &amp; Funcs</b></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">Over</a></li>
+    <li><a href="../index.html">Andere taal</a></li>
+   </ul>
+   <div id="content">
+    <h2 id="what-are-variables">Wat zijn variabelen</h2>
+    <p>
+     Variabelen zijn net zoals getallen, ze worden dan ook behandeld als getallen.
+     Het enige verschil is dat hun waarde kan veranderen.
+     Variabelen hebben een naam, vaak is dit een simpele naam als <samp>x</samp>.
+     Maar ze kunnen elke naam hebben die u wilt, en nog belangrijker: ze kunnen elke waarde bevatten die u wilt.
+     Bijvoorbeeld: als de variabele <samp>x</samp> de waarde <samp>5</samp> is, dan zal <samp>2*x</samp> gelijk aan <samp>10</samp> zijn.<br />
+     Variabelen kunnen vaker in een berekening voorkomen, bijvoorbeeld: u hebt een variabele <samp>secsInMinute</samp> wat (uiteraard) <samp>60</samp> is.
+     Dan kan u <samp>secsInMinute+secsInMinute/2</samp> gebruiken om het aantal seconden in anderhalve minuut te berekenen.<br />
+     Meer dan 1 variabele kan in een berekening voorkomen, dus met <samp>x*secsInMinute</samp> berekent u het aantal seconden in <samp>x</samp> minuten.
+     In dit voorbeeld (waar <samp>x</samp> 5 is en <samp>secsInMinute</samp> 60 is) zal de uitkomst <samp>300</samp> zijn.<br />
+     Verder kan een variabele ook nog eens van waarde veranderen.
+     Dus als u niet het aantal seconden in 5 minutes wilde berekenen, maar het aantal seconden in 1 uur dan kan u typen: <samp>x=60</samp> (en druk dan op <cite>Enter</cite> of <cite>Ok</cite>).
+     Dan maakt u het invoervakje leeg en vult u weer <samp>x*secsInMinute</samp> in, wat zal als uitkomst <samp>3600</samp> zal hebben.<br />
+     Natuurlijk zou het in dit geval een stuk sneller zijn om <samp>60*60</samp> te typen, maar dit was dan ook slechts een voorbeeld.
+     Variabelen kunnen erg nuttig zijn met grotere berekeningen, en met lastigere getallen.
+     Verder zijn ze handig om een getal tijdelijk op te slaan, of zelfs voor een langere tijd want Dalculator onthoudt uw variabelen en hun waarden.
+     Merk op dat variabelen hoofdletter gevoelig zijn!
+     Verder zijn er een aantal regels voor het benoemen van variabelen, zie <a href="#naming_varfunc"><cite>Variabelen en functies namen geven</cite></a> voor meer info.
+    </p>
+    <h2>Voorgedefinieerde variabelen</h2>
+    <p>
+     Er zijn 2 variabelen voorgedefinieerd in Dalculator, dit zijn <samp>pi</samp> en <samp>e</samp>.
+     De variabele <samp>pi</samp> is gelijk aan de wiskundige constante &pi; (wat in Dalculator <samp>3.141592653590</samp> is).
+     De variabele <samp>e</samp> is gelijk aan de wiskundige constante <i>e</i> (wat in Dalculator <samp>2.718281828459</samp> is).
+     U kunt deze variabelen bewerken als elke andere variabele.
+     Als u er een andere waarde aan toegekend hebt kunt u makkelijk de originele waarde terugkrijgen, daarvoor <a href="#varfunc_dialog">verwijdert u de variabele</a> gewoon en dan maakt Dalculator hem automatisch opnieuw aan met zijn originele waarde.
+    </p>
+    <h2 id="what_are_func">Wat zijn functies</h2>
+    <p>
+     Functies zijn een snellere manier om veel gebruikte formules te gebruiken.
+     Als u de oppervlakte van een cirkel moet berekenen, dan kunt u <samp>pi*r^2</samp> gebruiken.
+     Maar dit kan een formule zijn die u steeds vergeet, of sommige formules zijn te lang om telkens weer in te typen.
+     Dat is waar functies voor zijn, in dit geval kunt u een functie genaamd <samp>cirkel</samp> maken.
+     Nadat u deze functie heeft gemaakt hoeft u enkel <samp>cirkel(r)</samp> te typen en dan wordt de oppervlakte van de cirkel met een straal <samp>r</samp> uitgerekend!<br />
+     Functies hebben altijd een naam (zie: <cite><a href="#naming_varfunc">Variabelen en functies namen geven</a></cite> voor meer info), deze naam wordt gebruikt om te achterhalen om welke functie het gaat.
+     In het voorbeeld was de naam <samp>cirkel</samp>.
+     Om een functie te gebruiken moet de naam getypt worden en daarna een openingshaakje: <samp>cirkel(</samp>
+     Nu komen de <i>argumenten</i>, dit zijn waarde die de functie nodig heeft om zijn werk te doen.
+     In ons voorbeeld hoeven we enkel de straal van de cirkel door te geven: <samp>cirkel(r</samp>
+     Als laatst moeten de haakjes gesloten worden: <samp>cirkel(r)</samp>.
+     Soms moet u meer dan 1 waarde aan een functie doorgeven, bijvoorbeeld bij het berekenen van de oppervlakte van een rechthoek.
+     Als u meer dan 1 waarde moet doorgeven aan een functie, dan zet u een komma tussen de verschillende waardes.
+     Dus als de functie <samp>rh</samp> de oppervlakte van een rechthoek berekent, typt u: <samp>rh(breedte, hoogte)</samp>
+     De spatie na de komma is optioneel.
+     Een functie zonder argument ziet er uiteraard zo uit: <samp>functie()</samp><br />
+    </p>
+    <h2>Voorgedefinieerde functies</h2>
+    <p>
+     In Dalculator zitten een aantal voorgedefinieerde functies.
+     De meeste hebben enkel 1 argument nodig, en ze zijn allemaal in hoofdletters.
+     U kunt deze functies niet bewerken, maar u kunt ze herdefini&euml;ren, door een functie met dezelfde naam te defini&eum;ren gewoon net zoals u elke andere <a href="#defining_functions">functie zou defini&euml;ren</a>.
+     Als u de originele functie wil herstellen, dan hoeft u slechts uw eigen functie te verwijderen.
+     Voor meer info over het defini&eum;ren van functies, zie <a href="#varfunc_dialog"><cite>Het variabelen &amp; functies overzicht</cite></a> en <a href="#defining_functions"><cite>Functies defini&euml;ren en bewerken</cite></a>.<br />
+     Bij sommige functies moet het argument in radialen of graden, en bij sommige zal het resultaat in radialen of graden zijn.
+     U kunt aangeven welke van de twee Dalculator moet gebruiken, door op <i>Instellingen &gt; Graden of radialen &gt; Graden</i> of <i>Instellingen &gt; Graden of radialen &gt; Radialen</i> in het menu te klikken.
+     De standaard instelling is radialen.
+    </p>
+    <table>
+     <thead>
+      <tr><td>Naam</td><td>Wat doet het</td></tr>
+     </thead>
+     <tbody>
+      <tr><td class="center">ABS</td><td>Geeft de absolute waarde van zijn argument, negatieve waardes worden dus positief.</td></tr>
+      <tr class="dark"><td class="center">ACOS</td><td>Geeft de boogcosinus van het argument. Het resultaat is in graden of radialen (afhankelijk van de instellingen). In goniometrie is dit de inverse bewerking van de cosinus.</td></tr>
+      <tr><td class="center">ASIN</td><td>Geeft de boogsinus van het argument. Het resultaat is in graden of radialen (afhankelijk van de instellingen). In goniometrie is dit de inverse bewerking van de sinus.</td></tr>
+      <tr class="dark"><td class="center">ATAN</td><td>Geeft de boogtangens van het argument. Het resultaat is in graden of radialen (afhankelijk van de instellingen). In goniometrie is dit de inverse bewerking van de tangens.</td></tr>
+      <tr><td class="center">CEIL</td><td>Rond het argument naar boven af.</td></tr>
+      <tr class="dark"><td class="center">COS</td><td>Geeft de cosinus van het argument. Het argument moet in graden of radialen zijn (afhankelijk van de instellingen).</td></tr>
+      <tr><td class="center">COSH</td><td>Geeft de hyperbolische cosinus van het argument.</td></tr>
+      <tr class="dark"><td class="center">DEG</td><td>Zet het argument (dat in radialen moet zijn) om in graden.</td></tr>
+      <tr><td class="center">EXP</td><td>Geeft <samp>e<sup>argument</sup></samp> waar <i>e</i> de wiskundige constante <i>e</i> is (dat is in Dalculator: <samp>2.718281828459</samp>)</td></tr>
+      <tr class="dark"><td class="center">FACULTY</td><td>Geeft de faculteit van het argument, bijvoorbeeld <samp>FACULTY(3) = 3*2*1 = 6</samp>.</td></tr>
+      <tr><td class="center">FLOOR</td><td>Rond het argument naar beneden af.</td></tr>
+      <tr class="dark"><td class="center">IF</td><td>Heeft op zijn minst 2 argumenen nodig, als het eerste argument niet 0 is zal het resultaat het tweede argument zijn. Als het eerste argument wel 0 is en een derde argument is gegeven, dan zal het resultaat het 3e argument zijn. Als het eerste argument 0 is en er is geen derde argument gegeven dan zal het resultaat 0 zijn.</td></tr>
+      <tr><td class="center">LOG</td><td>Geeft het natuurlijke logarithme van het argument.</td></tr>
+      <tr class="dark"><td class="center">LOG10</td><td>Geeft het normale (basis-10) logarithme van het argument.</td></tr>
+      <tr><td class="center">RAD</td><td>Zet het argument (dat in graden moet zijn) om in radialen.</td></tr>
+      <tr class="dark"><td class="center">RAND</td><td>Het resultaat is een willekeurig getal 0 en 1 als geen argumenten gegeven zijn. Als er 1 argument gegeven is zal het resultaat een willekeurig geheel getal van 0 tot en met het argument zijn. Als er 2 argumenten gegeven zijn is het resultaat een geheel getal tussen het eerste argument (inbegrepen) en het laatste argument (inbegrepen).</td></tr>
+      <tr><td class="center">ROUND</td><td>Rond het argument af.</td></tr>
+      <tr class="dark"><td class="center">SIN</td><td>Geeft de sinus van het argument. Het argument moet in graden of radialen zijn (afhankelijk van de instellingen).</td></tr>
+      <tr><td class="center">SINH</td><td>Geeft de hyperbolische sinus van het argument.</td></tr>
+      <tr class="dark"><td class="center">TAN</td><td>Geeft de tangens van het argument. Het argument moet in graden of radialen zijn (afhankelijk van de instellingen).</td></tr>
+      <tr><td class="center">TANH</td><td>Geeft de hyperbolische tangens van het argument.</td></tr>
+     </tbody>
+    </table>
+    <h2 id="naming_varfunc">Variabelen en functies namen geven</h2>
+    <p>
+     Er zijn een aantal regels bij het geven van een naam aan een variabele of functie.
+     De naam moet starten met een lage streept (_) of een letter (hoofdletter of kleine letter).
+     Daarna kunnen er zoveel letters (hoofdletters of kleine letters), lage strepen (_) of getallen gebruikt worden als u wilt.
+     Merk op dat een naam <b>niet met een getal mag beginnen</b>!
+     Onthoud, namen zijn hoofdlettergevoelig. Dus <samp>mijnnaam</samp> is iets anders dan <samp>mijnNaam</samp>!
+     Een variabele en een functie kunnen dezelfde naam hebben, omdat de haakjes aangeven wanneer het een functie is en wanneer het een variabele is.
+     Er kunnen geen 2 variabelen dezelfde naam hebben, hetzelfde geldt voor functies: geen 2 functies kunnen dezelfde naam hebben.
+     Een paar voorbeelden:
+    </p>
+    <table>
+     <thead>
+      <tr><td>Naam</td><td>Toegestaan?</td><td>Waarom?</td></tr>
+     </thead>
+     <tbody>
+      <tr><td>mijnnaam</td><td>Ja</td><td>-</td></tr>
+      <tr class="dark"><td>mijnNaam</td><td>Ja</td><td>-</td></tr>
+      <tr><td>mijn naam</td><td>Nee</td><td>Spaties zijn niet toegestaan in namen</td></tr>
+      <tr class="dark"><td>mijn_naam</td><td>Ja</td><td>-</td></tr>
+      <tr><td>mijnTweedeNaam</td><td>Ja</td><td>-</td></tr>
+      <tr class="dark"><td>mijn2eNaam</td><td>Ja</td><td>-</td></tr>
+      <tr><td>2eNaam</td><td>Nee</td><td>Een naam mag niet met een getal beginnen</td></tr>
+      <tr class="dark"><td>_2eNaam</td><td>Ja</td><td>-</td></tr>
+      <tr><td>__</td><td>Ja</td><td>-</td></tr>
+      <tr class="dark"><td>mijn-naam</td><td>Nee</td><td>Een '-' is niet toegestaan in namen</td></tr>
+      <tr><td>mijn(tweede)naam</td><td>Nee</td><td>'(' en ')' zijn niet toegestaan in namen</td></tr>
+     </tbody>
+    </table>
+    <h2 id="varfunc_dialog">Het variabelen &amp; functies overzicht</h2>
+    <p>
+     Het variabelen en functies overzicht kan gebruikt worden om variabelen en functies te bewerken.
+     Variabelen kunnen ook bewerkt worden door <samp>variabele=waarde</samp> te typen, maar voor het verwijderen van variabelen heeft u dit overzicht nodig.
+     Functies kunnen alleen in dit overzicht bewerkt en verwijderd worden.
+     Om dit overzicht te openen klikt u op de <img class="inline" src="../style/function.png" alt="Variabelen &amp; functies knop" title="Variabelen &amp; functies knop" />-knop, u vindt deze knop links onder in het hoofdscherm.
+     Wanneer u op die knop geklikt hebt zal het volgende scherm verschijnen:
+     <span class="center"><img src="../style/nl/screenshot_varfunc_dialog_vars.png" alt="Screenshot van het variabelen &amp; functies overzicht" title="Screenshot van het variabelen &amp; functies overzicht" /></span>
+     In dit overzicht staan 3 tabbladen, waarin u uw variabelen en functies kan bewerken.
+     Op de pagina die u op de screenshot hierboven ziet kunt u uw variabelen bewerken.
+     Gebruik de tabbladen bovenaan om naar een andere pagina binnen het overzicht te navigeren.
+     Op de pagina <cite>Functies</cite> kunt u <a href="#defining_functions">uw functies bewerken</a>.
+     Op de laatste pagina kan u variabelen en funties verwijderen, selecteer hiervoor de variabelen en functies die u wilt verwijderen en klik dan op <cite>Verwijder</cite>
+    </p>
+    <h2 id="defining_functions">Functies defini&euml;ren &amp; bewerken.</h2>
+    <p>
+     U kunt nieuwe functies aanmaken in <a href="#varfunc_dialog"><cite>het variabelen &amp; functies overzicht</cite></a>.
+     Hoe u zorgt dat de functies ook echt wat doen wordt hier uitgelegd.
+     Wanneer u op <cite>Voeg functie toe</cite> klikt zal een nieuwe functie verschijnen aan het einde van de lijst.
+     U kunt deze functie hernoemen naar wat u maar wilt, zolang u de <a href="#naming_varfunc">regels voor het geven van namen</a> maar volgt.
+     In het invoervakje rechts van de naam staat standaard <cite>ARG0+ARG1</cite>, dit is wat de functie doet.
+     U kunt gewoon een berekening typen in dat invoervakje, en die berekening zal uitgevoerd worden wanneer u de functie gebruikt.
+     Maar functies kunnen argumenten hebben (zie <a href="#what_are_func"><cite>Wat zijn functies</cite></a>), u kunt ook argumenten gebruiken in uw zelfgemaakte functies.
+     Daarvoor gebruikt u ARG<i>nummer-van-het-argument</i> om het argument te gebruiken.
+     Het aantal argumenten dat uw functie nodig heeft wordt bepaald aan de hand van het aantal gebruikte ARG-variabelen in uw functie.
+     Bijvoorbeeld: de functie <samp>func</samp> bevat: <samp>ARG0+ARG1</samp>, dan zou deze functie dus 2 argumenten nodig hebben.
+     Wanneer u deze functie gebruikt, <samp>func(3, 4)</samp> zou dat resulteren in <samp>7</samp>.
+     Omdat <samp>ARG0</samp> 3 is (in dit voorbeeld), en <samp>ARG1</samp> 4 is (in dit voorbeeld).
+     De functie telt <samp>ARG1</samp> bij <samp>ARG0</samp> op, dus dat wordt <samp>3+4 = 7</samp>.
+     Merk op dat het eerste argument niet <samp>ARG1</samp> heet, maar <samp>ARG0</samp>, dus het tellen van de argumenten begint bij 0!
+    </p>
+   </div>
+  </div>
+ </body>
+</html>
