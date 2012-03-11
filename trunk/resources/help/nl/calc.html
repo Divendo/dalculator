@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nl" lang="nl">
+ <head>
+  <title>Dalculator - Nederlands helpdocument</title>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="../style/main.css" />
+ </head>
+ <body>
+  <div id="page">
+   <h1>Dalculator - Help</h1>
+   <ul id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><b>Berekenen</b></li>
+    <li><a href="varfunc.html">Vars &amp; Funcs</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">Over</a></li>
+    <li><a href="../index.html">Andere taal</a></li>
+   </ul>
+   <div id="content">
+    <h2>De basis</h2>
+    <p>
+     Deze pagina legt uit hoe u berekeningen kunt doen met Dalculator.
+     Het is eigenlijk erg simpel, wanneer u Dalculator opstart zal het er zo uit zien:<br />
+     <span class="center"><img src="../style/nl/screenshot.png" alt="Screenshot van het hoofdscherm" title="Screenshot van het hoofdscherm" /></span>
+     Type gewoon uw berekening in het invoer vakje, en druk dan op <cite>Enter</cite> of klik op <cite>Ok</cite>.
+     Bijvoorbeeld: u wilt weten wat <samp>(5+2)*3</samp> is, dan typt u simpelweg: <samp>(5+2)*3</samp> en drukt u op <cite>Enter</cite> of klikt u op <cite>Ok</cite>.
+     Het antwoord zal nu in het invoer vakje verschijnen, in dit geval is dat uiteraard <cite>21</cite>.
+    </p>
+    <h2>De operatoren</h2>
+    <p>
+     Dalculator is vooral gemaakt voor snelle simpele berekeningen, maar er zitten veel operatoren in ingebouwd.
+     De volgende operatoren zijn ingebouwd:
+    </p>
+    <table>
+     <thead>
+      <tr><td>Operator</td><td>Prioriteit</td><td>Wat doet het</td></tr>
+     </thead>
+     <tbody>
+      <tr><td class="operator">x<b>^</b>y</td><td>Eerste</td><td>Geeft de <samp>y<sup>e</sup></samp> macht van <samp>x</samp></td></tr>
+      <tr class="dark"><td class="operator">x<b>~</b>y</td><td>Eerste</td><td>Geeft de <samp>y<sup>e</sup></samp> wortel van <samp>x</samp> dit is gelijk aan <samp>x^(1/y)</samp>, dus <samp>x~2</samp> is de vierkantswortel <samp>x</samp></td></tr>
+      <tr><td class="operator">x<b>*</b>y</td><td>Tweede</td><td>Vermenigvuldigt <samp>x</samp> met <samp>y</samp></td></tr>
+      <tr class="dark"><td class="operator">x<b>/</b>y</td><td>Tweede</td><td>Deelt <samp>x</samp> door <samp>y</samp></td></tr>
+      <tr><td class="operator">x<b>%</b>y</td><td>Tweede</td><td>Geeft de rest van <samp>x/y</samp></td></tr>
+      <tr class="dark"><td class="operator">x<b>+</b>y</td><td>Derde</td><td>Telt <samp>x</samp> bij <samp>y</samp> op</td></tr>
+      <tr><td class="operator">x<b>-</b>y</td><td>Derde</td><td>Trekt <samp>y</samp> van <samp>x</samp> af</td></tr>
+      <tr class="dark"><td class="operator">x<b>&lt;</b>y</td><td>Vierde</td><td>Vergelijkt <samp>x</samp> met <samp>y</samp>, en geeft 1 als <samp>x</samp> kleiner is dan <samp>y</samp> als dat niet zo is geeft hij 0</td></tr>
+      <tr><td class="operator">x<b>&gt;</b>y</td><td>Vierde</td><td>Vergelijkt <samp>x</samp> met <samp>y</samp>, en geeft 1 als <samp>x</samp> groter is dan <samp>y</samp> als dat niet zo is geeft hij 0</td></tr>
+      <tr class="dark"><td class="operator">x<b>&amp;</b>y</td><td>Vijfde</td><td>Berekend de <i>bitwise and</i> van <samp>x</samp> en <samp>y</samp></td></tr>
+      <tr><td class="operator">x<b>|</b>y</td><td>Vijfde</td><td>Berekend de <i>bitwise or</i> van <samp>x</samp> en <samp>y</samp></td></tr>
+      <tr class="dark"><td class="operator">x<b>=</b>y</td><td>Zesde</td><td>Maakt <samp>x</samp> gelijk aan <samp>y</samp>, <samp>x</samp> moet een variabele zijn!</td></tr>
+     </tbody>
+     </table>
+    <p>
+     De operatoren met de eerste prioriteit zullen als eerste uitgerekend worden, daarna de operatoren met de tweede prioriteit, etc.
+     Dit is dus hetzelfde als in de wiskunde. En net zoals in wiskunde kunt u haakjes gebruiken om iets voorrang te geven boven al het andere.
+     Bijvoorbeeld: <samp>2+5*3</samp> wordt <samp>17</samp> (<samp>2+15</samp>), maar <samp>(2+5)*3</samp> zal resulteren in <samp>21</samp> (<samp>7*3</samp>)
+     Denk er altijd aan de haakjes te sluiten!
+    </p>
+    <h2>Hexadecimaal en octaal</h2>
+    <p>
+     In Dalculator kunt u gebruik maken van hexadecimale en octale getallen.
+     U kunt bijvoorbeeld schrijven: <samp>2*0xff</samp>, omdat <samp>0xff</samp> gelijk is aan <samp>255</samp> in het decimale stelsel, zal de uitvoer gelijk zijn aan: <samp>510</samp>.
+     U kunt dus hexadecimale getallen gebruike door eerst <samp>0x</samp> te schrijven en dan het hexadecimale getal (hoofdletter ongevoelig).
+     Octale getallen kunt u op een vergelijkbare manier gebruiken, type eerst een <samp>0</samp> en dan het octale nummer, bijvoorbeeld: <samp>072</samp> (dat is <samp>58</samp> in het decimale stelsel).<br />
+     U kunt aangeven of de uitvoer <i>decimaal</i> (<samp>255</samp>), <i>wetenschappelijk</i> (<samp>2.55e2</samp>), <i>hexadecimaal</i> (<samp>0xff</samp>), <i>octaal</i> (<samp>0377</samp>), <i>binair</i> (<samp>11111111</samp>), <i>tijd</i> (zie <a href="#calculating-with-time">Rekenen met tijd</a>) or <i>automatisch</i> (kiest automatisch tussen decimaal, wetenschappelijk of tijd) moet zijn. Merk op dat, ondanks dat je wel binair als uitvoertype kan kiezen, je geen binaire getallen als invoer kan gebruiken. Merk ook op dat het niet mogelijk is komma-getallen te gebruiken met hexadecimale en octale getallen (bijvoorbeeld: u kunt niet <samp>1.5</samp> in het octale stelsel schrijven, maar u zou wel het volgende kunnen schrijven: <samp>01+05/10</samp>). Dit betekent dat hexadecimale, octale en binaire uitvoer ook afgerond wordt.
+    </p>
+    <h2 id="calculating-with-time">Rekenen met tijd</h2>
+    <p>
+     Dalculator kan met tijd rekenen, bijvoorbeeld: <samp>2*01:30:00</samp> zal als uitvoer <samp>03:00:00</samp> hebben (als het uitvoer type <i>tijd</i> of <i>automatisch</i> is).
+     Tijd wordt als eenheid gebruikt, niet als datum. Dus <samp>12:00 + 14:00</samp> (12 uur + 14 uur) is simpelweg <samp>26:00:00</samp> (26 uur).
+     Als u een tijd in een variabele opslaat (zie <a href="#what-are-variables">Wat zijn variabelen</a> voor meer info) zult u merken dat de tijd in seconden wordt opgeslagen: <samp>a = 1:30</samp>, <samp>a</samp> is nu <samp>5400</samp>.<br />
+     Er zijn meerdere manieren om tijd als invoer te gebruiken, u kunt <samp>hours:minutes</samp> schrijven of <samp>hours:minutes:seconds</samp>.
+     Het is mogelijk <samp>0:77</samp> te schrijven (0 uur en 77 minuten), dat is precies hetzelfde als: <samp>1:17</samp>.<br />
+     Het is mogelijk 3 decimalen achter de secondes toe te voegen, wat betekent dat de kleinste tijdeenheid die u in kan geven 1 milliseconde is.
+     Bijvoorbeeld: <samp>3:24:56.32</samp> is: 3 uur, 24 minuten, 56 seconden en 320 milliseconden.
+    </p>
+    <h2>Overige opmerkingen</h2>
+    <p>
+     Niet alleen hele getallen zijn toegestaan, ook getallen met decimalen zijn toegestaan.
+     Maar in plaats van een ',' wordt een '.' gebruikt, het is dus <samp>1.5</samp> in plaats van <samp>1,5</samp>.
+     De komma's worden voor iets anders gebruikt (zie <a href="varfunc.html#what_are_func">Wat zijn functies</a> voor meer info).<br />
+     U kunt ook spaties en tabs gebruiken waar u maar wilt, deze worden toch genegeerd.
+     Uitzondering hier op zijn namen van <a href="varfunc.html#content"><cite>variabelen en functies</cite></a>, voor meer informatie over namen zie: <a href="varfunc.html#naming_varfunc">Variabelen &amp; functies namen geven</a>.
+     Dus <samp>100&nbsp;000&nbsp;*&nbsp;2</samp> is gelijk aan <samp>100000*2</samp>.
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file alias="exit.png">resources/icons/exit.png</file>
+        <file alias="function.png">resources/icons/function.png</file>
+        <file alias="plus.png">resources/icons/plus.png</file>
+        <file alias="delete.png">resources/icons/delete.png</file>
+        <file alias="qt-logo.png">resources/icons/qt-logo.png</file>
+        <file alias="en.gif">resources/icons/en.gif</file>
+        <file alias="nl.gif">resources/icons/nl.gif</file>
+        <file alias="dalculator.ico">resources/icons/dalculator.ico</file>
+    </qresource>
+</RCC>

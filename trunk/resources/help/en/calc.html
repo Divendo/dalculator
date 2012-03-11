@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>Dalculator - English help</title>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="../style/main.css" />
+ </head>
+ <body>
+  <div id="page">
+   <h1>Dalculator - Help</h1>
+   <ul id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><b>Calculating</b></li>
+    <li><a href="varfunc.html">Vars &amp; Funcs</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="../index.html">Language</a></li>
+   </ul>
+   <div id="content">
+    <h2>The basics</h2>
+    <p>
+     This page exlpains how to calculate something using Dalculator.
+     In fact it's very simple, when you start Dalculator it will look like this:<br />
+     <span class="center"><img src="../style/en/screenshot.png" alt="Screenshot of main window" title="Screenshot of main window" /></span>
+     Just type the calculation you want to do in the input box, and press <cite>Enter</cite> or click <cite>Ok</cite>.
+     For example, if you want to know the answer to <samp>(5+2)*3</samp>, you simply type: <samp>(5+2)*3</samp> and press <cite>Enter</cite> or click <cite>Ok</cite>.
+     The answer will appear in the input box now, which of course is <cite>21</cite>.
+    </p>
+    <h2>The operators</h2>
+    <p>
+     Dalculator is mainly made for quick simple calculations, although it has a lot of operators built in.
+     The following operators are built in:
+    </p>
+    <table>
+     <thead>
+      <tr><td>Operator</td><td>Priority</td><td>What does it do</td></tr>
+     </thead>
+     <tbody>
+      <tr><td class="operator">x<b>^</b>y</td><td>First</td><td>Gives the <samp>y<sup>th</sup></samp> power of <samp>x</samp></td></tr>
+      <tr class="dark"><td class="operator">x<b>~</b>y</td><td>First</td><td>Gives the <samp>y<sup>th</sup></samp> root of <samp>x</samp> this is equal to <samp>x^(1/y)</samp>, so <samp>x~2</samp> is the square root of <samp>x</samp></td></tr>
+      <tr><td class="operator">x<b>*</b>y</td><td>Second</td><td>Multiplies <samp>x</samp> by <samp>y</samp></td></tr>
+      <tr class="dark"><td class="operator">x<b>/</b>y</td><td>Second</td><td>Divides <samp>x</samp> by <samp>y</samp></td></tr>
+      <tr><td class="operator">x<b>%</b>y</td><td>Second</td><td>Gives the remainder of <samp>x/y</samp></td></tr>
+      <tr class="dark"><td class="operator">x<b>+</b>y</td><td>Third</td><td>Adds <samp>x</samp> to <samp>y</samp></td></tr>
+      <tr><td class="operator">x<b>-</b>y</td><td>Third</td><td>Subtracts <samp>y</samp> from <samp>x</samp></td></tr>
+      <tr class="dark"><td class="operator">x<b>&lt;</b>y</td><td>Fourth</td><td>Compares <samp>x</samp> with <samp>y</samp>, gives 1 if <samp>x</samp> is smaller than <samp>y</samp> if not it will give 0</td></tr>
+      <tr><td class="operator">x<b>&gt;</b>y</td><td>Fourth</td><td>Compares <samp>x</samp> with <samp>y</samp>, gives 1 if <samp>x</samp> is greater than <samp>y</samp> if not it will give 0</td></tr>
+      <tr class="dark"><td class="operator">x<b>&amp;</b>y</td><td>Fifth</td><td>Calculates the <i>bitwise and</i> of <samp>x</samp> and <samp>y</samp></td></tr>
+      <tr><td class="operator">x<b>|</b>y</td><td>Fifth</td><td>Calculates the <i>bitwise or</i> of <samp>x</samp> and <samp>y</samp></td></tr>
+      <tr class="dark"><td class="operator">x<b>=</b>y</td><td>Sixth</td><td>Makes <samp>x</samp> equal to <samp>y</samp>, <samp>x</samp> must be a variable!</td></tr>
+     </tbody>
+     </table>
+    <p>
+     The operators with the first priority will be calculated first, then the operators with the second priority, etc.
+     This is the same as with normal mathematics. And as in normal mathematics you can use brackets to give something priority above everything else.
+     For example: <samp>2+5*3</samp> results in <samp>17</samp> (<samp>2+15</samp>), but <samp>(2+5)*3</samp> will result in <samp>21</samp> (<samp>7*3</samp>).
+     Remember to always close every bracket you use!
+    </p>
+    <h2>Hexadecimal and octal</h2>
+    <p>
+     You can use hexadecimal and octal numbers.
+     For example, you can write: <samp>2*0xff</samp>, because <samp>0xff</samp> is <samp>255</samp> in decimal the output will be: <samp>510</samp>.
+     So you can use hexadecimal numbers by writing <samp>0x</samp> first and then the number (case insensitive).
+     You can use octal numbers in a similair way, just put a <samp>0</samp> before the octal number: <samp>072</samp> is <samp>58</samp> in decimal.<br />
+     You can specify the format of the ouput to be <i>decimal</i> (<samp>255</samp>), <i>scientific</i> (<samp>2.55e2</samp>), <i>hexadecimal</i> (<samp>0xff</samp>), <i>octal</i> (<samp>0377</samp>), <i>binary</i> (<samp>11111111</samp>), <i>time</i> (see <a href="#calculating-with-time">Calculating with time</a>) or <i>auto</i> (which chooses automatically between decimal, scientific or time). Note that, even though you can specify binary as output type, you can't use binary numbers as input. Also note that it isn't posible to use point numbers with hexadecimal and octal (for example: you can't write <samp>1.5</samp> in octal, but you can write <samp>01+05/10</samp>). This means that binary, octal or hexadecimal output also is rounded.
+    </p>
+    <h2 id="calculating-with-time">Calculating with time</h2>
+    <p>
+     Dalculator can calculate with time, for example: <samp>2*01:30:00</samp> will output <samp>03:00:00</samp> (if the output type is set to <i>time</i> or <i>auto</i>).
+     It uses time as an unit, not a date. So <samp>12:00 + 14:00</samp> (12 hours + 14 hours) is simply <samp>26:00:00</samp> (26 hours).
+     If you store a time value in a variable (see <a href="#what-are-variables">What are variables</a> for more info) you'll notice it stores the time in seconds: <samp>a = 1:30</samp>, <samp>a</samp> is now <samp>5400</samp>.<br />
+     There are several ways to use time as an unit, you can write: <samp>hours:minutes</samp>, or: <samp>hours:minutes:seconds</samp>.
+     It is possible to write <samp>0:77</samp> (0 hours and 77 minutes), which is the same as: <samp>1:17</samp>.<br />
+     It is possible to add up to 3 decimals after the seconds, so the smallest amount of time you can give in is 1 millisecond.
+     For example: <samp>3:24:56.32</samp> is: 3 hours, 24 minutes, 56 seconds and 320 millisecond.
+    </p>
+    <h2>Other syntaxis notes</h2>
+    <p>
+     Not only integer numbers are allowed, but also point numbers are allowed.
+     But instead of using a ',' you should use a '.', so it's <samp>1.5</samp> instead of <samp>1,5</samp>.
+     The commas are used for something else (see: <a href="varfunc.html#what_are_func">What are functions</a> for more info).<br />
+     You can also use whitespaces (that are spaces and tabs) where you want them.
+     Except in names of <a href="varfunc.html#content"><cite>variables and functions</cite></a>, for more information about names see: <a href="varfunc.html#naming_varfunc"><cite>Naming variables &amp; functions</cite></a>.
+     So <samp>100&nbsp;000&nbsp;*&nbsp;2</samp> is equal to <samp>100000*2</samp>.
+    </p>
+   </div>
+  </div>
+ </body>
+</html>
