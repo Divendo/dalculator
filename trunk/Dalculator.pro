@@ -64,3 +64,19 @@ INSTALLS += data
 help.path = /usr/share/dalculator/data/help
 help.files = resources/help/*
 INSTALLS += help
+
+desktop.path = /usr/share/applications
+desktop.files = resources/dalculator.desktop
+INSTALLS += desktop
+
+icon16.path = /usr/share/icons/hicolor/16x16/apps
+icon16.files = resources/icons/16/dalculator.png
+icon24.path = /usr/share/icons/hicolor/24x24/apps
+icon24.files = resources/icons/24/dalculator.png
+icon32.path = /usr/share/icons/hicolor/32x32/apps
+icon32.files = resources/icons/32/dalculator.png
+icon48.path = /usr/share/icons/hicolor/48x48/apps
+icon48.files = resources/icons/48/dalculator.png
+icon64.path = /usr/share/icons/hicolor/64x64/apps
+icon64.files = resources/icons/64/dalculator.png
+INSTALLS += icon16 icon24 icon32 icon48 icon64

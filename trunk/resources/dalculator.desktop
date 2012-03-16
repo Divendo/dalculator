@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Dalculator
+Comment=A simple, easy-to-use calculator program
+TryExec=dalculator
+Exec=dalculator
+Icon=dalculator
+Categories=Utility
