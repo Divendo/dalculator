@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>Dalculator - English help</title>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="../style/main.css" />
+ </head>
+ <body>
+  <div id="page">
+   <h1>Dalculator - Help</h1>
+   <ul id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="calc.html">Calculating</a></b></li>
+    <li><b>Vars &amp; Funcs</b></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="../index.html">Language</a></li>
+   </ul>
+   <div id="content">
+    <h2 id="what-are-variables">What are variables</h2>
+    <p>
+     Variables are just like numbers, they're handled as numbers.
+     The only difference is that their value can change.
+     Variables have a name, mostly this is a simple name like <samp>x</samp>.
+     But they can have any name you want, and more important: they can hold any value you want.
+     For example, if the variable <samp>x</samp> holds the value <samp>5</samp> then will <samp>2*x</samp> be <samp>10</samp>.<br />
+     Variables can appear more than once in a calculation, for example: you have a variable <samp>secsInMinute</samp>, which is of course <samp>60</samp>.
+     You can use: <samp>secsInMinute+secsInMinute/2</samp> to calculate the number of seconds in 1.5 minutes.<br />
+     More than 1 variable can appear in a calculation, so <samp>x*secsInMinute</samp> will calculate the number of seconds in <samp>x</samp> minutes.
+     In this example (where <samp>x</samp> is 5 and <samp>secsInMinute</samp> is 60) this will be <samp>300</samp>.<br />
+     At last: a variable can change of value.
+     So if you didn't want to calculate the number of seconds in 5 minutes, but the number of seconds in 1 hour you could type: <samp>x=60</samp> (press <cite>Enter</cite> or <cite>Ok</cite>).
+     Then you clear the line and type <samp>x*secsInMinute</samp> which will result in <samp>3600</samp>.<br />
+     Of course it would be a lot faster if you only typed <samp>60*60</samp>, but this was only an example.
+     Variables can be very handy with larger calculations, and more difficult numbers.
+     And they're handy to store a number temporarily or for a longer while, because Dalculator saves your variables and their values.
+     Note that variables are case sensitive in Dalculator!
+     And there are some rules for naming variables, see <a href="#naming_varfunc"><cite>Naming variables and functions</cite></a> for more info.
+    </p>
+    <h2>Predefined variables</h2>
+    <p>
+     There are 2 variables predefined in Dalculator, these are <samp>pi</samp> and <samp>e</samp>.
+     The variable <samp>pi</samp> is equal to the mathematical constant: &pi; (which is in Dalculator: <samp>3.141592653590</samp>).
+     The variable <samp>e</samp> is equal to the mathematical constant <i>e</i> (which is in Dalculator: <samp>2.718281828459</samp>).
+     You can edit these variables like any other variable.
+     If you've assigned a value to it, you can easily get it's original value back, just <a href="#varfunc_dialog">delete the variable</a> and Dalculator will recreate it with it's original value.
+    </p>
+    <h2 id="what_are_func">What are functions</h2>
+    <p>
+     Functions are a short way to use some common formulas.
+     If you need to calculate the surface of a circle you could use <samp>pi*r^2</samp>
+     But it may be a formula you forget all the time, or sometimes a formula is too long to type over and over again.
+     That's where functions are for, in this case you could make a function called <samp>circle</samp>.
+     After creating this function you only need to type <samp>circle(r)</samp> and the surface of a circle with a radius of <samp>r</samp> will be calculated!<br />
+     Functions always have a name (see: <cite><a href="#naming_varfunc">Naming variables and functions</a></cite> for more info), which is used to identify the function.
+     In the example the name was <samp>circle</samp>.
+     To use the function you should type it's name and then a opening bracket: <samp>circle(</samp>
+     Now you should type it's <i>arguments</i>, these are the values the function needs to do it's work.
+     In our example we only need to pass the radius of the circle: <samp>circle(r</samp>
+     After that you've to close the brackets: <samp>circle(r)</samp> and you're done!
+     Sometimes you need to pass more than 1 value to a function, for example by calculating the surface of a rectangle.
+     If you need to pass more than 1 value to a function, you seperate them with commas.
+     So if the function <samp>rect</samp> calculates the surface of a rectangle you should type: <samp>rect(width, height)</samp>
+     The space after the comma is optional.
+     Of course, using a function without arguments would be: <samp>function()</samp><br />
+    </p>
+    <h2>Predefined functions</h2>
+    <p>
+     There are some predefined functions in Dalculator.
+     Most of these functions take only 1 argument, and they are all in capital letters.
+     You can't edit these functions but you can redefine them, by <a href="#defining_functions">defining a function</a> with the same name as you would define any other function.
+     If you want to restore the old function, you can just delete your own function.
+     For more info about defining and deleting functions, see <a href="#varfunc_dialog"><cite>Variables &amp; functions dialog</cite></a> and <a href="#defining_functions"><cite>Defining &amp; editting functions</cite></a>.<br />
+     Some functions require their argument in radians or degrees, and the result will also be in radians or degrees.
+     You can set Dalculator to radians or degrees by clicking <i>Settings &gt; Degrees or radians &gt; Degrees</i> or <i>Settings &gt; Degrees or radians &gt; Radians</i> in the menu.
+     The default setting is radians.
+    </p>
+    <table>
+     <thead>
+      <tr><td>Name</td><td>What does it do</td></tr>
+     </thead>
+     <tbody>
+      <tr><td class="center">ABS</td><td>Returns the absolute value of the argument, which makes a positive value of any negative values.</td></tr>
+      <tr class="dark"><td class="center">ACOS</td><td>Returns the arc cosine of the argument. The result is in radians or degrees (deppending on the settings). In trigonometrics this is the inverse operation of cosine.</td></tr>
+      <tr><td class="center">ASIN</td><td>Returns the arc sine of the argument. The result is in radians or degrees (deppending on the settings). In trigonometrics this is the inverse operation of sine.</td></tr>
+      <tr class="dark"><td class="center">ATAN</td><td>Returns the arc tangent of the argument. The result is in radians or degrees (deppending on the settings). In trigonometrics this is the inverse operation of tangent.</td></tr>
+      <tr><td class="center">CEIL</td><td>Rounds up the argument.</td></tr>
+      <tr class="dark"><td class="center">COS</td><td>Returns the cosine of the argument. The argument should be in radians or degrees (deppending on the settings).</td></tr>
+      <tr><td class="center">COSH</td><td>Returns the hyperbolic cosine of the argument.</td></tr>
+      <tr class="dark"><td class="center">DEG</td><td>Converts the argument (which should be in radians) to degrees.</td></tr>
+      <tr><td class="center">EXP</td><td>Returns <samp>e<sup>argument</sup></samp> where <i>e</i> is the mathematical constant <i>e</i> (which is in Dalculator: <samp>2.718281828459</samp>)</td></tr>
+      <tr class="dark"><td class="center">FACULTY</td><td>Returns the faculty of the argument, so for instance <samp>FACULTY(3) = 3*2*1 = 6</samp>.</td></tr>
+      <tr><td class="center">FLOOR</td><td>Rounds down the argument.</td></tr>
+      <tr class="dark"><td class="center">IF</td><td>Takes at least 2 arguments, if the first argument is not 0 the result will be the second argument. If the first argument is 0 and a third argument is specified, the result will be the third argument. If the first argument is 0 and no third argument is specified, the result is 0.</td></tr>
+      <tr><td class="center">LOG</td><td>Returns the natural logarithm of the argument.</td></tr>
+      <tr class="dark"><td class="center">LOG10</td><td>Returns the common (base-10) logarithm of the argument.</td></tr>
+      <tr><td class="center">RAD</td><td>Converts the argument (which should be in degrees) to radians.</td></tr>
+      <tr class="dark"><td class="center">RAND</td><td>The result is a random number between 0 and 1 if no arguments are given. If 1 argument is given the result is a random integer from 0 to the arugment (including the argument). If 2 arguments are given, the result is a random integer between the first argument (included) and the second argument (included).</td></tr>
+      <tr><td class="center">ROUND</td><td>Rounds the argument.</td></tr>
+      <tr class="dark"><td class="center">SIN</td><td>Returns the sine of the argument. The argument should be in radians or degrees (deppending on the settings).</td></tr>
+      <tr><td class="center">SINH</td><td>Returns the hyperbolic sine of the argument.</td></tr>
+      <tr class="dark"><td class="center">TAN</td><td>Returns the tangent of the argument. The argument should be in radians or degrees (deppending on the settings).</td></tr>
+      <tr><td class="center">TANH</td><td>Returns the hyperbolic tangent of the argument.</td></tr>
+     </tbody>
+    </table>
+    <h2 id="naming_varfunc">Naming variables &amp; functions</h2>
+    <p>
+     When naming your variables or functions there are some restrictions.
+     The name should start with an underscore (_) or a letter (lowercase or capital).
+     After that you can use as many letters (lowercase or capital), underscores (_) or numbers as you want.
+     Note that a number as first character of the name is <b>not allowed</b>!
+     Remember, names are case sensitive. So <samp>myname</samp> is something else then <samp>myName</samp>!
+     A variable and a function can have the same name, because the parentheses show whether it's a function or a variable.
+     Two variables can't have the same name, also 2 functions can't have the same name.
+     Some examples:
+    </p>
+    <table>
+     <thead>
+      <tr><td>Name</td><td>Allowed?</td><td>Why?</td></tr>
+     </thead>
+     <tbody>
+      <tr><td>myname</td><td>Yes</td><td>-</td></tr>
+      <tr class="dark"><td>myName</td><td>Yes</td><td>-</td></tr>
+      <tr><td>my name</td><td>No</td><td>Spaces are not allowed in names</td></tr>
+      <tr class="dark"><td>my_name</td><td>Yes</td><td>-</td></tr>
+      <tr><td>mySecondName</td><td>Yes</td><td>-</td></tr>
+      <tr class="dark"><td>my2ndName</td><td>Yes</td><td>-</td></tr>
+      <tr><td>2ndName</td><td>No</td><td>A name may not start with a number</td></tr>
+      <tr class="dark"><td>_2ndName</td><td>Yes</td><td>-</td></tr>
+      <tr><td>__</td><td>Yes</td><td>-</td></tr>
+      <tr class="dark"><td>my-name</td><td>No</td><td>An '-' isn't allowed in names</td></tr>
+      <tr><td>my(second)Name</td><td>No</td><td>'(' and ')' aren't allowed in names</td></tr>
+     </tbody>
+    </table>
+    <h2 id="varfunc_dialog">Variables &amp; functions dialog</h2>
+    <p>
+     The variables and functions dialog can be used to edit variables and functions.
+     Variables can also be editted by typing <samp>variable=value</samp>, but for deleting them you'll need this dialog.
+     Functions can only be editted and deleted using this dialog.
+     To open this dialog just click the <img class="inline" src="../style/function.png" alt="Variables &amp; functions button" title="Variables &amp; functions button" />-button, you'll find this button at the bottom left corner of the main window.
+     When you clicked it you'll see a dialog:
+     <span class="center"><img src="../style/en/screenshot_varfunc_dialog_vars.png" alt="Screenshot of variables &amp; functions dialog" title="Screenshot of variables &amp; functions dialog" /></span>
+     You've 3 tabs in this dialog where you can edit your variables and functions.
+     On the page on the screenshot above you can edit your variables.
+     Using the tabs above you can navigate to another page.
+     On the page <cite>Functions</cite> you can <a href="#defining_functions">edit your functions</a>.
+     On the last page you can delete variables and functions, select the variables and functions you want to delete and click <cite>Delete</cite>
+    </p>
+    <h2 id="defining_functions">Defining &amp; editting functions</h2>
+    <p>
+     You can create new functions with the <a href="#varfunc_dialog"><cite>Variables &amp; functions dialog</cite></a>.
+     How to make them to something will be explained here.
+     When you click <cite>Add function</cite> a new function will appear at the end of the list.
+     You can rename it to whatever you want, as long as you follow the <a href="#naming_varfunc">naming rules</a>.
+     The edit-box right to the name says by default <cite>ARG0+ARG1</cite>, this is what the function does.
+     You can just type a calculation in that box, and that calculation will be done when you use the function.
+     But functions can have arguments (see <a href="#what_are_func"><cite>What are functions</cite></a>), you can also use arguments in your own functions.
+     You can use ARG<i>number-of-the-argument</i> to use an argument.
+     The amount of arguments will be determined by the ARG-variables in your function.
+     So for example, function <samp>func</samp> contains: <samp>ARG0+ARG1</samp>, this function would need 2 arguments.
+     When using this function, <samp>func(3, 4)</samp> would result in <samp>7</samp>.
+     Because <samp>ARG0</samp> is 3 (in this example), and <samp>ARG1</samp> is 4 (in this example).
+     The function adds <samp>ARG1</samp> to <samp>ARG0</samp>, so that's <samp>3+4 = 7</samp>.
+     Note that the first argument isn't named <samp>ARG1</samp> but <samp>ARG0</samp>, so the counting starts at 0!
+    </p>
+   </div>
+  </div>
+ </body>
+</html>
