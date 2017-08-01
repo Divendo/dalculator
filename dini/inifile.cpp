@@ -31,7 +31,7 @@ namespace dini
             return sections.back();
         }
 
-        iniSection iniFile::getSection(const std::string& name) const throw(unknownName)
+        iniSection iniFile::getSection(const std::string& name) const
         {
             // Search for the section, if we find it, return it, if not, throw an error
             for(std::vector<iniSection>::const_iterator pos=sections.begin(); pos!=sections.end(); ++pos)
@@ -126,7 +126,7 @@ namespace dini
         iniFile::const_reverse_iterator iniFile::rend() const
         { return sections.rend(); }
 
-        void iniFile::saveToFile(const std::string& filename) const throw(fileError)
+        void iniFile::saveToFile(const std::string& filename) const
         {
             // Open file for writing, and check if it's openend succesfully
             std::ofstream file(filename.c_str(), std::ofstream::out | std::ofstream::trunc | std::ofstream::binary);
@@ -175,7 +175,7 @@ namespace dini
             file.close();
         }
 
-        void iniFile::loadFromFile(const std::string& filename) throw(fileError, errorCorrupted)
+        void iniFile::loadFromFile(const std::string& filename)
         {
             // Open file for reading, and check if it's opened succesfully
             std::ifstream file(filename.c_str(), std::ios_base::in | std::ios_base::binary);
@@ -261,7 +261,7 @@ namespace dini
             return out;
         }
 
-        iniSection iniFile::sectionFromLine(const std::string& line) const throw(errorCorrupted)
+        iniSection iniFile::sectionFromLine(const std::string& line) const
         {
             // Search for the first '[', if it can't be found something's wrong
             const size_t start=line.find('[');
@@ -276,7 +276,7 @@ namespace dini
             return iniSection(line.substr(start+1, end-start-1));
         }
 
-        iniValue iniFile::valueFromLine(const std::string& line) const throw(errorCorrupted)
+        iniValue iniFile::valueFromLine(const std::string& line) const
         {
             // We're going to return 'out', buffer is to temporary store a part of the line, and nameDone is true if the '=' is found
             iniValue out;

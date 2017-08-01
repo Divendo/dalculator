@@ -53,7 +53,7 @@ namespace dini
 
             // Get a value by name
             iniValue& getValue(const std::string& name);
-            iniValue getValue(const std::string& name) const throw(unknownName);
+            iniValue getValue(const std::string& name) const;
 
             // Assigns a value to a name
             void setValue(const std::string& name, const iniValue& value);
@@ -80,7 +80,7 @@ namespace dini
 
             // Gets a value by name
             iniValue& operator[](const std::string& name);
-            iniValue operator[](const std::string& name) const throw(unknownName);
+            iniValue operator[](const std::string& name) const;
 
             // Copies all the values from another section in this one, ignoring the name of the other section
             iniSection& operator=(const iniSection& other);

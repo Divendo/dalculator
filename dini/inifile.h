@@ -68,7 +68,7 @@ namespace dini
 
             // Get a section by name
             iniSection& getSection(const std::string& name);
-            iniSection getSection(const std::string& name) const throw(unknownName);
+            iniSection getSection(const std::string& name) const;
             // Change the contents of an entire section
             void setSection(const std::string& name, const iniSection& section);
             // Rename a section (the new name may not already exist), returns true if the renaming was succesfull
@@ -103,14 +103,14 @@ namespace dini
             const_reverse_iterator rend() const;
 
             // Save all data to a ini file
-            void saveToFile(const std::string& filename) const throw(fileError);
+            void saveToFile(const std::string& filename) const;
             // Load all data from a ini file
-            void loadFromFile(const std::string& filename) throw(fileError, errorCorrupted);
+            void loadFromFile(const std::string& filename);
 
         private:
             std::string removeWhitespacesAndComments(const std::string& line) const;
-            iniSection sectionFromLine(const std::string& line) const throw(errorCorrupted);
-            iniValue valueFromLine(const std::string& line) const throw(errorCorrupted);
+            iniSection sectionFromLine(const std::string& line) const;
+            iniValue valueFromLine(const std::string& line) const;
 
             std::vector<iniSection> sections;
     };

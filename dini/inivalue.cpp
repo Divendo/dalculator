@@ -58,7 +58,7 @@ namespace dini
             return true;
         }
 
-        int iniValue::toInt() const throw(valueType)
+        int iniValue::toInt() const
         {
             // Try converting the string to an int, if it fails, throw an error
             int out=0;
@@ -68,7 +68,7 @@ namespace dini
                 throw typeInt;
             return out;
         }
-        double iniValue::toDouble() const throw(valueType)
+        double iniValue::toDouble() const
         {
             // Try converting the string to a double, if it fails, throw an error
             double out=0;
@@ -78,14 +78,14 @@ namespace dini
                 throw typeDouble;
             return out;
         }
-        char iniValue::toChar() const throw(valueType)
+        char iniValue::toChar() const
         {
             // Just return the first character of the string, this can't be done if the string is empty
             if(currValue.length()!=1)
                 throw typeChar;
             return currValue[0];
         }
-        bool iniValue::toBool() const throw(valueType)
+        bool iniValue::toBool() const
         {
             // "0" or "false" gives false, "true" or any other number gives true
             if(currValue=="0" || diniPrivate::strCaseCompare(currValue, "false"))
@@ -132,31 +132,31 @@ namespace dini
 
         iniValue& iniValue::operator+=(const iniValue& other)
         { currValue+=other.currValue; return *this; }
-        iniValue& iniValue::operator+=(const int& value) throw(valueType)
+        iniValue& iniValue::operator+=(const int& value)
         { setValue(toDouble()+value); return *this; }
-        iniValue& iniValue::operator+=(const double& value) throw(valueType)
+        iniValue& iniValue::operator+=(const double& value)
         { setValue(toDouble()+value); return *this; }
         iniValue& iniValue::operator+=(const char& value)
         { currValue+=value; return *this; }
-        iniValue& iniValue::operator+=(const bool& value) throw(valueType)
+        iniValue& iniValue::operator+=(const bool& value)
         { setValue(toDouble()+value); return *this; }
         iniValue& iniValue::operator+=(const std::string& value)
         { currValue+=value; return *this; }
         iniValue& iniValue::operator+=(const char* value)
         { currValue+=value; return *this; }
 
-        iniValue& iniValue::operator-=(const iniValue& other) throw(valueType)
+        iniValue& iniValue::operator-=(const iniValue& other)
         { setValue(toDouble()-other.toDouble()); return *this; }
-        iniValue& iniValue::operator-=(const int& value) throw(valueType)
+        iniValue& iniValue::operator-=(const int& value)
         { setValue(toDouble()-value); return *this; }
-        iniValue& iniValue::operator-=(const double& value) throw(valueType)
+        iniValue& iniValue::operator-=(const double& value)
         { setValue(toDouble()-value); return *this; }
-        iniValue& iniValue::operator-=(const char& value) throw(valueType)
+        iniValue& iniValue::operator-=(const char& value)
         { setValue(toDouble()-value); return *this; }
-        iniValue& iniValue::operator-=(const bool& value) throw(valueType)
+        iniValue& iniValue::operator-=(const bool& value)
         { setValue(toDouble()-value); return *this; }
 
-        bool iniValue::operator!() const throw(valueType)
+        bool iniValue::operator!() const
         { return !toBool(); }
 
         bool iniValue::operator==(const iniValue& other) const

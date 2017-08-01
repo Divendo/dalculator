@@ -45,7 +45,7 @@ namespace dini
             return values.back();
         }
 
-        iniValue iniSection::getValue(const std::string& name) const throw(unknownName)
+        iniValue iniSection::getValue(const std::string& name) const
         {
             // Search for the value by name, if it's found, return it.
             // If not, throw an error
@@ -201,7 +201,7 @@ namespace dini
 
         iniValue& iniSection::operator[](const std::string& name)
         {return getValue(name);}
-        iniValue iniSection::operator[](const std::string& name) const throw(unknownName)
+        iniValue iniSection::operator[](const std::string& name) const
         {return getValue(name);}
 
         iniSection& iniSection::operator=(const iniSection& other)
