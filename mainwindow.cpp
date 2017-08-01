@@ -307,8 +307,9 @@
         // If the yes-button was clicked, open the webpage where the update can be downloaded
         if(updateWindow->buttonRole(button) == QMessageBox::YesRole)
             QDesktopServices::openUrl(myUpdateChecker.getSoftwarePage());
-        // Delete the update window
-        delete updateWindow;
+
+        // Schedule the update window for deletion
+        updateWindow->deleteLater();
         updateWindow = 0;
     }
     void MainWindow::updateErrorOccurred(const bool& httpError)
