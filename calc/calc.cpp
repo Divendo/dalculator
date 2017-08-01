@@ -736,12 +736,15 @@ namespace calc
                     const real firstVal = tokenToValue(*(pos-1));
                     const real secondVal = tokenToValue(*(pos+1));
 
-                    // A non integer root isn't allowed
-                    if(std::floor(secondVal) != secondVal)
-                        throw calcError("Non integer root", calcError::invalidOperands, secondVal);
-                    // Some roots don't allow negative numbers (e.g. there is no square root of -11, i.e. not in the real numbers)
-                    if(firstVal < 0 && !(static_cast<int>(secondVal)%2) && pos->str[0] == '~')
-                        throw calcError("Root of a negative value", calcError::invalidOperands, firstVal);
+                    // Only allow integer powers of negative numbers
+                    if(firstVal < 0)
+                    {
+                        if(pos->str[0] != '^')
+                            throw calcError("No negative roots allowed", calcError::invalidOperands);
+
+                        if(std::floor(secondVal) != secondVal)
+                            throw calcError("Only integer powers of negative numbers", calcError::invalidOperands);
+                    }
 
                     // Replace the current token by the result of it's operation and erase the operands
                     *pos = Token(Token::tokenRealReal, "", std::pow(firstVal, pos->str[0]=='^' ? secondVal : 1/secondVal) );

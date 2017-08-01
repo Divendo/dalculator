@@ -407,10 +407,10 @@
                 break;
 
                 case calc::calcError::invalidOperands:
-                    if(err.msg == "Non integer root")
-                        msg = tr("The second operand of a root must be an integer");
-                    else if(err.msg == "Root of a negative value")
-                        msg = tr("Can't take root of %1").arg(err.extraRealInfo[0]);
+                    if(err.msg == "No negative roots allowed")
+                        msg = tr("Can't take the root of a negative value");
+                    else if(err.msg == "Only integer powers of negative numbers")
+                        msg = tr("Only integer powers of negative numbers are allowed");
                     else if(err.msg == "Division by 0")
                         msg = tr("Can't divide by 0!");
                     else if(err.msg == "Modulo by 0")

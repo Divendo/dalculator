@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="en_US">
+<TS version="2.1" language="en_US">
 <context>
     <name>MainWindow</name>
     <message>
@@ -245,24 +245,24 @@ p, li { white-space: pre-wrap; }
         <translation>Change language to Dutch</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="289"/>
+        <location filename="../mainwindow.cpp" line="296"/>
         <source>New version available</source>
         <translation>New version available</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="290"/>
+        <location filename="../mainwindow.cpp" line="297"/>
         <source>A new version of Dalculator is available.
 Would you like to go to the download page to download and install the new version?</source>
         <translation>A new version of Dalculator is available.
 Would you like to go to the download page to download and install the new version?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="316"/>
+        <location filename="../mainwindow.cpp" line="324"/>
         <source>Update HTTP Error</source>
         <translation>Update HTTP Error</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="317"/>
+        <location filename="../mainwindow.cpp" line="325"/>
         <source>Dalculator couldn&apos;t retrieve the latest version number from the internet.
 Make sure you have an internet connection and your firewall isn&apos;t blocking Dalculator.
 Do you want to check for a new version manually?
@@ -273,12 +273,12 @@ Do you want to check for a new version manually?
 You can find your current version by clicking Help &gt; About...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="327"/>
+        <location filename="../mainwindow.cpp" line="335"/>
         <source>Update unknown error</source>
         <translation>Update unknown error</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="328"/>
+        <location filename="../mainwindow.cpp" line="336"/>
         <source>An unknown error occurred while checking for updates.
 Would you like to check for a new version manually?
 You can find your current version by clicking Help &gt; About...</source>
@@ -287,7 +287,7 @@ Would you like to check for a new version manually?
 You can find your current version by clicking Help &gt; About...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="341"/>
+        <location filename="../mainwindow.cpp" line="349"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
@@ -376,13 +376,21 @@ You can find your current version by clicking Help &gt; About...</translation>
     </message>
     <message>
         <location filename="../qtcalc.cpp" line="411"/>
-        <source>The second operand of a root must be an integer</source>
-        <translation>The second operand of a root must be an integer</translation>
+        <source>Can&apos;t take the root of a negative value</source>
+        <translation>Can&apos;t take the root fo a negative value</translation>
     </message>
     <message>
         <location filename="../qtcalc.cpp" line="413"/>
+        <source>Only integer powers of negative numbers are allowed</source>
+        <translation>Only integer powers of negative numbers are allowed</translation>
+    </message>
+    <message>
+        <source>The second operand of a root must be an integer</source>
+        <translation type="vanished">The second operand of a root must be an integer</translation>
+    </message>
+    <message>
         <source>Can&apos;t take root of %1</source>
-        <translation>Can&apos;t take root of %1</translation>
+        <translation type="vanished">Can&apos;t take root of %1</translation>
     </message>
     <message>
         <location filename="../qtcalc.cpp" line="415"/>
