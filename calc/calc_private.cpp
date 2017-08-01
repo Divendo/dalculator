@@ -27,7 +27,7 @@ namespace calc
 {
     namespace calcPrivate
     {
-        real binStr2real(const string& str, const bool& throwError) throw(calcError)
+        real binStr2real(const string& str, const bool& throwError)
         {
             real out = 0;                           // The result is stored in this variable
             unsigned short counter = 0;             // Counts the number of 1's and 0's that are parsed
@@ -51,7 +51,7 @@ namespace calc
             return out;
         }
 
-        real octStr2real(const string& str, const bool& throwError) throw(calcError)
+        real octStr2real(const string& str, const bool& throwError)
         {
             real out = 0;                           // The result is stored in this variable
             unsigned short counter = 0;             // Counts the number of read ciphers
@@ -75,7 +75,7 @@ namespace calc
             return out;
         }
 
-        real decStr2real(const string& str, const bool& throwError) throw(calcError)
+        real decStr2real(const string& str, const bool& throwError)
         {
             real out = 0;                           // The result is stored in this variable
             bool dotEncounterd = false;             // Whether or not we've already encountered a dot (.)
@@ -130,7 +130,7 @@ namespace calc
             return out;
         }
 
-        real hexStr2real(const string& str, const bool& throwError) throw(calcError)
+        real hexStr2real(const string& str, const bool& throwError)
         {
             real out = 0;                           // The result is stored in this variable
             unsigned short counter = 0;             // Counts the number of read ciphers
@@ -196,7 +196,7 @@ namespace calc
             return out;
         }
 
-        string real2binStr(const real& val) throw(overflowError)
+        string real2binStr(const real& val)
         {
             // If the value is too big to convert, throw an error
             if(val > std::numeric_limits<unsigned long int>::max())
@@ -221,7 +221,7 @@ namespace calc
             return (val<0 ? "-" : "")+out;
         }
 
-        string real2octStr(const real& val) throw(overflowError)
+        string real2octStr(const real& val)
         {
             // If the value is too big to convert, throw an error
             if(val>std::numeric_limits<unsigned long int>::max())
@@ -310,7 +310,7 @@ namespace calc
                 return out.substr(0, zeroFromPos);
         }
 
-        string real2hexStr(const real& val) throw(overflowError)
+        string real2hexStr(const real& val)
         {
             // If the value is too big to convert, throw an error
             if(val>std::numeric_limits<unsigned long int>::max())

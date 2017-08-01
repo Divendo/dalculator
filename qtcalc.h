@@ -144,7 +144,7 @@ class QTCalcMemberMathFunction : public calc::mathFunction
         QTCalcMemberMathFunction(function initFunction, QTCalc* obj, const bool& cleanUpNeeded = false);
 
         // Execute this function
-        calc::real execute(const calc::argList& vars, const calc::string& name) throw(calc::calcError);
+        calc::real execute(const calc::argList& vars, const calc::string& name);
 
     private:
         // The current function to be executed by execute()

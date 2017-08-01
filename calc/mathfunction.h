@@ -37,7 +37,7 @@ namespace calc
             bool cleanUpNeeded() const;
 
             // Execute the function
-            virtual real execute(const argList& vars, const string& name) throw(calcError) = 0;
+            virtual real execute(const argList& vars, const string& name) = 0;
 
         protected:
             // Whether this function should be cleaned up by its parent
@@ -57,7 +57,7 @@ namespace calc
             void setFunction(const function& newFunction);
 
             // Execute this function
-            virtual real execute(const argList& vars, const string& name) throw(calcError);
+            virtual real execute(const argList& vars, const string& name);
 
         private:
             // The current function to be executed by execute()
@@ -77,7 +77,7 @@ namespace calc
             void setFunction(const function& newFunction);
 
             // Execute this function
-            virtual real execute(const argList& vars, const string& name) throw(calcError);
+            virtual real execute(const argList& vars, const string& name);
 
         private:
             // The current function to be executed by execute()
@@ -101,7 +101,7 @@ namespace calc
             bool isValidExpression();
 
             // Execute the expression
-            virtual real execute(const argList& vars, const string& name) throw(calcError);
+            virtual real execute(const argList& vars, const string& name);
 
         private:
             // Static member to filter out functions that (indirectly) call themselfs

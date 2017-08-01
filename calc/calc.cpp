@@ -305,13 +305,13 @@ namespace calc
         bool calc::isValidExpression() const
         { return expressionParsed && errors.size() == 0; }
 
-        real calc::calculate(const string& newExpr) throw(calcError)
+        real calc::calculate(const string& newExpr)
         {
             setExpression(newExpr);
             return calculate();
         }
 
-        real calc::calculate() throw(calcError)
+        real calc::calculate()
         {
             // Check if parsing is needed
             if(!expressionParsed)
@@ -555,7 +555,7 @@ namespace calc
         bool calc::isWhitespace(const char& chr) const
         { return std::isspace(chr); }
 
-        real calc::tokenToValue(const Token& token) const throw(calcError)
+        real calc::tokenToValue(const Token& token) const
         try
         {
             switch(token.type)
@@ -908,7 +908,7 @@ namespace calc
         }
 
 // Functions:
-    real str2real(const string& str, const bool& throwError) throw(calcError)
+    real str2real(const string& str, const bool& throwError)
     {
         // Determine the type of the real and parse it
         if(str.find("0x") == (str[0]=='-'))
@@ -918,7 +918,7 @@ namespace calc
         return calcPrivate::decStr2real(str, throwError);
     }
 
-    real timestr2real(const string& str, const bool& throwError) throw (calcError)
+    real timestr2real(const string& str, const bool& throwError)
     {
         // Initialise some variables needed for the parsing of the string
         real out = 0;                                                           // This will be returned at the of the function
@@ -956,7 +956,7 @@ namespace calc
         return out;
     }
 
-    string real2str(const real& val, const realOutputType& outputType, const int& precision) throw(overflowError)
+    string real2str(const real& val, const realOutputType& outputType, const int& precision)
     {
         // Determine the desired output type and call the right function
         switch(outputType)

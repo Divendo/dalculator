@@ -38,9 +38,9 @@ namespace calc
             bool copyToCalculator(calc& calculator) const;
 
             // Load the settings from a file
-            void loadFromFile(const string& fileName) throw(fileError, parseError);
+            void loadFromFile(const string& fileName);
             // Save the settings to a file
-            void saveToFile(const string& fileName) throw(fileError);
+            void saveToFile(const string& fileName);
 
         protected:
             // Checks if the given name is a valid name
@@ -48,8 +48,8 @@ namespace calc
 
         private:
             // Read or write a file that is using file-format version 1
-            void fileParserV1(const string& filename) throw(fileError, parseError);
-            void saveToFileV1(const string& filename) throw(fileError);
+            void fileParserV1(const string& filename);
+            void saveToFileV1(const string& filename);
     };
 }
 

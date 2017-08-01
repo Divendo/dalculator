@@ -578,7 +578,7 @@
         QTCalcMemberMathFunction::QTCalcMemberMathFunction(function initFunction, QTCalc* obj, const bool& cleanUpNeeded)
         : calc::mathFunction(cleanUpNeeded), currFunc(initFunction), obj(obj) {}
 
-        calc::real QTCalcMemberMathFunction::execute(const calc::argList& vars, const calc::string& name) throw(calc::calcError)
+        calc::real QTCalcMemberMathFunction::execute(const calc::argList& vars, const calc::string& name)
         {
             try
             {

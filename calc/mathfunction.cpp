@@ -41,7 +41,7 @@ namespace calc
             void preDefinedMathFunction::setFunction(const function& newFunction)
             { currFunc = newFunction; }
 
-            real preDefinedMathFunction::execute(const argList& vars, const string& name) throw(calcError)
+            real preDefinedMathFunction::execute(const argList& vars, const string& name)
             {
                 try
                 {
@@ -67,7 +67,7 @@ namespace calc
             void cppMathFunction::setFunction(const function& newFunction)
             { currFunc = newFunction; }
 
-            real cppMathFunction::execute(const argList& vars, const string& name) throw(calcError)
+            real cppMathFunction::execute(const argList& vars, const string& name)
             {
                 try
                 {
@@ -116,7 +116,7 @@ namespace calc
                 return calculator->isValidExpression();
             }
 
-            real userDefinedMathFunction::execute(const argList& vars, const string& name) throw(calcError)
+            real userDefinedMathFunction::execute(const argList& vars, const string& name)
             {
                 // Check if this function isn't (indirectly) calling itself
                 if(std::find(userDefinedMathFunction::callStack.begin(), userDefinedMathFunction::callStack.end(), name) != userDefinedMathFunction::callStack.end())

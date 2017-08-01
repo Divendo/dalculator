@@ -92,10 +92,10 @@ namespace calc
             // Calculate the current expression, this function will parse the expression if it wasn't parsed already
             // Returns the result of the expression, if an error occurs while parsing or calculating an error is thrown
             // If more than one error is encountered during the parsing, the first error is thrown all other errors can still be retrieved using getParseErrors()
-            real calculate() throw(calcError);
+            real calculate();
             // Set the current expression to newExpr and calculate the expression, this function will also parse the expression
             // Returns the result of the expression, if an error occurs while parsing or calculating an error is thrown
-            real calculate(const string& newExpr) throw(calcError);
+            real calculate(const string& newExpr);
 
         private:
             // Static:
@@ -162,7 +162,7 @@ namespace calc
             // Check whether the character is a whitespace
             bool isWhitespace(const char& chr) const;
             // Returns the real value of the token, this resolves any variables as well
-            real tokenToValue(const Token& token) const throw(calcError);
+            real tokenToValue(const Token& token) const;
 
             // Construct a calculator using the given tokens
             // Also set whether the to be created instance should clean up all math functions
@@ -182,13 +182,13 @@ namespace calc
 
     // Functions:
         // Converts the given string (str) to a real value, if throwError is true this function will throw an error if something goes wrong
-        real str2real(const string& str, const bool& throwError = false) throw(calcError);
+        real str2real(const string& str, const bool& throwError = false);
         // Converts the given string (str) containing a time (e.g. 2:31:12) to a real holding the number of seconds
         // If throwError is true this function will throw an error if something goes wrong
-        real timestr2real(const string& str, const bool& throwError = false) throw (calcError);
+        real timestr2real(const string& str, const bool& throwError = false);
         // Converts the given real (val) to a string, using the given format (outputType) and precision
         // If the precision is a negative number std::numeric_limits<real>::digits10 will be used
-        string real2str(const real& val, const realOutputType& outputType = outputType_auto, const int& precision = -1) throw(overflowError);
+        string real2str(const real& val, const realOutputType& outputType = outputType_auto, const int& precision = -1);
 }
 
 #endif // CALC_H

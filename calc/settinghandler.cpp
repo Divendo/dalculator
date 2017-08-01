@@ -87,13 +87,13 @@ namespace calc
                 return succes;
             }
 
-            void settingHandler::loadFromFile(const string& fileName) throw(fileError, parseError)
+            void settingHandler::loadFromFile(const string& fileName)
             {
                 clear();
                 fileParserV1(fileName);
             }
 
-            void settingHandler::saveToFile(const string& fileName) throw(fileError)
+            void settingHandler::saveToFile(const string& fileName)
             { saveToFileV1(fileName); }
 
         // Protected:
@@ -110,7 +110,7 @@ namespace calc
             }
 
         // Private:
-            void settingHandler::fileParserV1(const string& filename) throw(fileError, parseError)
+            void settingHandler::fileParserV1(const string& filename)
             {
                 // Open file, and tell it to throw an exception if something goes wrong
                 std::ifstream in(filename.c_str(), std::ifstream::in | std::ifstream::binary);
@@ -160,7 +160,7 @@ namespace calc
                 }
             }
 
-            void settingHandler::saveToFileV1(const string& filename) throw(fileError)
+            void settingHandler::saveToFileV1(const string& filename)
             {
                 // Open file, and tell it to throw an exception if something goes wrong
                 std::ofstream out(filename.c_str(), std::ofstream::out | std::ofstream::binary);

@@ -19,6 +19,8 @@
 #ifndef CALC_PRIVATE_H
 #define CALC_PRIVATE_H
 
+#include <cctype>
+
 #include "types.h"
 #include "error.h"
 
@@ -33,22 +35,22 @@ namespace calc
         { return (chr=='_') || (firstChar ? std::isalpha(chr) : std::isalnum(chr)); }
 
         // Converts a string containing a binary number to a real
-        real binStr2real(const string& str, const bool& throwError = false) throw(calcError);
+        real binStr2real(const string& str, const bool& throwError = false);
         // Converts a string containing an octal number to a real
-        real octStr2real(const string& str, const bool& throwError = false) throw(calcError);
+        real octStr2real(const string& str, const bool& throwError = false);
         // Converts a string containing a decimal number to a real
-        real decStr2real(const string& str, const bool& throwError = false) throw(calcError);
+        real decStr2real(const string& str, const bool& throwError = false);
         // Converts a string containing a hexadecimal number to a real
-        real hexStr2real(const string& str, const bool& throwError = false) throw(calcError);
+        real hexStr2real(const string& str, const bool& throwError = false);
 
         // Converts a real to a string containing the binary number
-        string real2binStr(const real& val) throw(overflowError);
+        string real2binStr(const real& val);
         // Converts a real to a string containing the octal number
-        string real2octStr(const real& val) throw(overflowError);
+        string real2octStr(const real& val);
         // Converts a real to a string containing the decimal number
         string real2decStr(const real& val, const realOutputType& outputType, const int& precision);
         // Converts a real to a string containing the hexadecimal number
-        string real2hexStr(const real& val) throw(overflowError);
+        string real2hexStr(const real& val);
         // Converts a real to a string containing it's value in time (1 is 1 sec)
         string real2timeStr(real val);
     }
