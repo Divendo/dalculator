@@ -41,7 +41,7 @@
             builtInFunctions["RAD"]     = new calc::cppMathFunction(mathFunctions::rad, false);
             builtInFunctions["ROUND"]   = new calc::cppMathFunction(mathFunctions::round, false);
             builtInFunctions["FACULTY"] = new calc::cppMathFunction(mathFunctions::faculty, false);
-            builtInFunctions["abc"]     = new calc::cppMathFunction(std::abs, false);
+            builtInFunctions["abs"]     = new calc::cppMathFunction(std::abs, false);
             builtInFunctions["ceil"]    = new calc::cppMathFunction(std::ceil, false);
             builtInFunctions["exp"]     = new calc::cppMathFunction(std::exp, false);
             builtInFunctions["log"]     = new calc::cppMathFunction(std::log, false);
