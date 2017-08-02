@@ -131,6 +131,7 @@ class QTCalc : public QObject
         inline calc::real tan(const calc::argList& args);
         inline calc::real tanh(const calc::argList& args);
         inline calc::real atan(const calc::argList& args);
+        inline calc::real avg(const calc::argList& args);
 };
 
 // Class to make member functions from the QTCalc class available as math functions for the calculator engine

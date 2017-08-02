@@ -62,6 +62,7 @@
             builtInFunctions["TAN"]     = new QTCalcMemberMathFunction(&QTCalc::tan, this, false);
             builtInFunctions["ATAN"]    = new QTCalcMemberMathFunction(&QTCalc::atan, this, false);
             builtInFunctions["TANH"]    = new QTCalcMemberMathFunction(&QTCalc::tanh, this, false);
+            builtInFunctions["AVG"]     = new QTCalcMemberMathFunction(&QTCalc::avg, this, false);
             builtInFunctions["cos"]     = new QTCalcMemberMathFunction(&QTCalc::cos, this, false);
             builtInFunctions["acos"]    = new QTCalcMemberMathFunction(&QTCalc::acos, this, false);
             builtInFunctions["cosh"]    = new QTCalcMemberMathFunction(&QTCalc::cosh, this, false);
@@ -71,6 +72,7 @@
             builtInFunctions["tan"]     = new QTCalcMemberMathFunction(&QTCalc::tan, this, false);
             builtInFunctions["atan"]    = new QTCalcMemberMathFunction(&QTCalc::atan, this, false);
             builtInFunctions["tanh"]    = new QTCalcMemberMathFunction(&QTCalc::tanh, this, false);
+            builtInFunctions["avg"]     = new QTCalcMemberMathFunction(&QTCalc::avg, this, false);
 
             builtInFunctions["RAND"]    = new calc::preDefinedMathFunction(mathFunctions::random, false);
             builtInFunctions["IF"]      = new calc::preDefinedMathFunction(mathFunctions::ifFunction, false);
@@ -477,7 +479,8 @@
                 err.extraRealInfo.push_back(1);
                 throw err;
             }
-            return std::cos(currAngleType == angleDegrees ? mathFunctions::rad(args[0]) : args[0]); }
+            return std::cos(currAngleType == angleDegrees ? mathFunctions::rad(args[0]) : args[0]);
+        }
 
         calc::real QTCalc::cosh(const calc::argList& args)
         {
@@ -571,6 +574,22 @@
             if(currAngleType == angleDegrees)
                 return mathFunctions::deg(std::atan(args[0]));
             return std::atan(args[0]);
+        }
+
+
+        calc::real QTCalc::avg(const calc::argList& args)
+        {
+            if(args.size() == 0)
+            {
+                calc::calcError err("Too less arguments", calc::calcError::invalidArguments, args.size());
+                err.extraRealInfo.push_back(1);
+                throw err;
+            }
+
+            calc::real total = 0;
+            for(calc::real arg : args)
+                total += arg;
+            return total / args.size();
         }
 
 // class QTCalcMemberMathFunction:
