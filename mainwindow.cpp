@@ -12,7 +12,7 @@
     : QMainWindow(parent), ui(new Ui::MainWindow),
       errorMessageTimer(0), errorMessageOpacity(0),
       myVarsFuncsDialog(0),
-      myUpdateChecker(updates::version(2, 1, 1, 4, false)), updateWindow(0),
+      myUpdateChecker(updates::version(2, 2, 0, 0, false)), updateWindow(0),
       aboutDialog(0),
       englishTranslator(0), dutchTranslator(0),
       historyDialog(100, this)

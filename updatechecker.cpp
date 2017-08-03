@@ -190,11 +190,13 @@ namespace updates
 
         // updateChecker:
             // Public:
+                // We use HTTP for version checking since Qt seems to have trouble with OpenSSL
                 updateChecker::updateChecker(const version& initVersion)
-                :reply(0), currVersion(initVersion), updateUrl("http://divendo-webs.com/check_version.php?id=1&check_version=1"),
-                softwarePage("http://divendo-webs.com/software.php?id=1")
+                :reply(0), currVersion(initVersion), updateUrl("http://markkamsma.nl/update-checker.php?app=dalculator"),
+                softwarePage("https://markkamsma.nl/portfolio/dalculator")
                 {
                     connect(this, SIGNAL(readSucces(const QString&)), this, SLOT(newVersionAvailableTranslator(const QString&)));
+                    networkAccess.setRedirectPolicy(QNetworkRequest::NoLessSafeRedirectPolicy);
                 }
 
                 bool updateChecker::isChecking() const
@@ -235,7 +237,7 @@ namespace updates
             // Private slots:
                 void updateChecker::requestFinished()
                 {
-                    if(reply->error()!=QNetworkReply::NoError)
+                    if(reply->error() != QNetworkReply::NoError)
                         errorOccurred(true);
                     else
                     {

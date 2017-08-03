@@ -295,22 +295,22 @@ U kunt uw huidige versie vinden onder Help &gt; About...</translation>
 <context>
     <name>QTCalc</name>
     <message>
-        <location filename="../qtcalc.cpp" line="345"/>
+        <location filename="../qtcalc.cpp" line="348"/>
         <source>Couldn&apos;t load the settings, the file seems to be corrupted!</source>
         <translation>Kon de instellingen niet laden, het bestand lijkt beschadigd te zijn!</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="347"/>
+        <location filename="../qtcalc.cpp" line="350"/>
         <source>An unexpected occurred error while loading the settings!</source>
         <translation>Er is een onverwachte fout opgetreden tijdens het laden van de instellingen!</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="350"/>
+        <location filename="../qtcalc.cpp" line="353"/>
         <source>An unexpected error occurred while trying to load the settings!</source>
         <translation>Een onverwachte fout is opgetreden terwijl er geprobeerd werd de instellingen te laden!</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="366"/>
+        <location filename="../qtcalc.cpp" line="369"/>
         <source>An unexpected error occurred while trying to save the settings!</source>
         <translation>Een onbekende error is opgetreden terwijl er geprobeerd werd de instellingen op te slaan!</translation>
     </message>
@@ -335,52 +335,52 @@ U kunt uw huidige versie vinden onder Help &gt; About...</translation>
         <translation type="obsolete">Onverwacht teken: &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="384"/>
+        <location filename="../qtcalc.cpp" line="387"/>
         <source>Unknown token: &apos;%1&apos;, at position %2</source>
         <translation>Onbekend teken: &apos;%1&apos; op positie %2</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="386"/>
+        <location filename="../qtcalc.cpp" line="389"/>
         <source>Unknown token: &apos;%1&apos;</source>
         <translation>Onbekend teken: &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="391"/>
+        <location filename="../qtcalc.cpp" line="394"/>
         <source>Unexpected &apos;.&apos; in a number</source>
         <translation>Onverwachte &apos;.&apos; in een getal</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="393"/>
+        <location filename="../qtcalc.cpp" line="396"/>
         <source>Unexpected token: &apos;%1&apos;, at position %2</source>
         <translation>Onverwacht teken: &apos;%1&apos; op positie %2</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="395"/>
+        <location filename="../qtcalc.cpp" line="398"/>
         <source>Unexpected token: &apos;%1&apos;</source>
         <translation>Onverwacht teken: &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="399"/>
+        <location filename="../qtcalc.cpp" line="402"/>
         <source>You didn&apos;t close all brackets, %1 brackets still need to be closed!</source>
         <translation>U heeft niet alle haakjes gesloten, %1 haakjes moeten nog gesloten worden!</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="404"/>
+        <location filename="../qtcalc.cpp" line="407"/>
         <source>Invalid expression: &apos;%1&apos;</source>
         <translation>Foutieve berekening: &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="406"/>
+        <location filename="../qtcalc.cpp" line="409"/>
         <source>Invalid expression: &apos;%1&apos;, in function %2</source>
         <translation>Foutieve berekening: &apos;%1&apos;, in functie %2</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="411"/>
+        <location filename="../qtcalc.cpp" line="414"/>
         <source>Can&apos;t take the root of a negative value</source>
         <translation>Kan geen wortel berekenen van een negatief getal</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="413"/>
+        <location filename="../qtcalc.cpp" line="416"/>
         <source>Only integer powers of negative numbers are allowed</source>
         <translation>Enkel gehele machten van negatieve getallen zijn toegestaan</translation>
     </message>
@@ -393,22 +393,22 @@ U kunt uw huidige versie vinden onder Help &gt; About...</translation>
         <translation type="vanished">Kan niet de wortel uit %1 trekken</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="415"/>
+        <location filename="../qtcalc.cpp" line="418"/>
         <source>Can&apos;t divide by 0!</source>
         <translation>Kan niet door 0 delen!</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="417"/>
+        <location filename="../qtcalc.cpp" line="420"/>
         <source>Can&apos;t modulo by 0!</source>
         <translation>Kan niet modulo 0 doen!</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="422"/>
+        <location filename="../qtcalc.cpp" line="425"/>
         <source>To less arguments: %1 given, %2 expected in function %3</source>
         <translation>Te weinig argumenten: %1 gegeven, %2 verwacht in functie %3</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="424"/>
+        <location filename="../qtcalc.cpp" line="427"/>
         <source>To many arguments: %1 given, %2 expected in function %3</source>
         <translation>Te veel argumenten: %1 gegeven, %2 verwacht in functie %3</translation>
     </message>
@@ -421,7 +421,7 @@ U kunt uw huidige versie vinden onder Help &gt; About...</translation>
         <translation type="obsolete">Te veel argumenten: %1 gegeven, %2 verwacht in functie %3.</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="426"/>
+        <location filename="../qtcalc.cpp" line="429"/>
         <source>Invalid argument: %1, given to function %2</source>
         <translation>Foutief argument: %1, gegeven aan functie %2</translation>
     </message>
@@ -438,32 +438,32 @@ U kunt uw huidige versie vinden onder Help &gt; About...</translation>
         <translation type="obsolete">Onbekende variabele: %1</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="434"/>
+        <location filename="../qtcalc.cpp" line="437"/>
         <source>Can&apos;t calculate an empty expression!</source>
         <translation>Kan geen lege berekening berekenen!</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="438"/>
+        <location filename="../qtcalc.cpp" line="441"/>
         <source>A function may function may not (indirectly) call itself, %1 does</source>
         <translation>Een functie mag zichzelf niet (indirect) aanroepen, %1 doet dit wel</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="442"/>
+        <location filename="../qtcalc.cpp" line="445"/>
         <source>An unknown error has occurred!</source>
         <translation>Een onbekende fout is opgetreden!</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="454"/>
+        <location filename="../qtcalc.cpp" line="457"/>
         <source>Value too big to convert to binary</source>
         <translation>Waarde te groot om naar binair om te zetten</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="457"/>
+        <location filename="../qtcalc.cpp" line="460"/>
         <source>Value too big to convert to octal</source>
         <translation>Waarde te groot om naar octaal om te zetten</translation>
     </message>
     <message>
-        <location filename="../qtcalc.cpp" line="460"/>
+        <location filename="../qtcalc.cpp" line="463"/>
         <source>Value too big to convert to hexadecimal</source>
         <translation>Waarde te groot om naar hexadecimaal om te zetten</translation>
     </message>
@@ -544,7 +544,6 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Deze applicatie is geschreven met Qt, klik de &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-style:italic;&quot;&gt;&amp;quot;Over Qt&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; knop voor meer informatie over Qt.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogabout.ui" line="49"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -557,7 +556,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;If you find any bugs, or if you have any suggestions please contact me. All feedback is appreciated!&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;This application is built using Qt, click the &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-style:italic;&quot;&gt;&amp;quot;About Qt&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; button for more information about Qt.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Arial&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -568,6 +567,33 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Dalculator is een simpele rekenmachine voor snelle berekeningen.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Neem alstublieft contact met me op als u bugs vindt of als u suggesties ter verbetering heeft. Alle feedback wordt gewaardeerd!&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Deze applicatie is geschreven met Qt, klik de &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-style:italic;&quot;&gt;&amp;quot;Over Qt&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; knop voor meer informatie over Qt.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../dialogabout.ui" line="49"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Arial&apos;; font-size:7.875pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Creator:&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;	Mark Kamsma&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Version:&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;	2.2&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Website:&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;	&lt;/span&gt;&lt;a href=&quot;https://markkamsma.nl&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://markkamsma.nl&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Dalculator is a simple calculator made for quick calculations.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;If you find any bugs, or if you have any suggestions please contact me. All feedback is appreciated!&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;This application is built using Qt, click the &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-style:italic;&quot;&gt;&amp;quot;About Qt&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; button for more information about Qt.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Arial&apos;; font-size:7.875pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Maker:&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;	Mark Kamsma&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Versie:&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;	2.2&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Website:&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;	&lt;/span&gt;&lt;a href=&quot;https://markkamsma.nl&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://markkamsma.nl&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Dalculator is een simpele rekenmachine voor snelle berekeningen.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Neem alstublieft contact met me op als u bugs vindt of als u suggesties ter verbetering heeft. Alle feedback wordt gewaardeerd!&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Deze applicatie is geschreven met Qt, klik de &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-style:italic;&quot;&gt;&amp;quot;Over Qt&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; knop voor meer informatie over Qt.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
