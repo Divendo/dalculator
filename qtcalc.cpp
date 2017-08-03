@@ -99,8 +99,9 @@
 
         QTCalc::~QTCalc()
         {
+            // Set all built in functions to be cleaned up, the destructor of the calculator object will then make sure this actually happens
             for(calc::functionList::iterator pos = builtInFunctions.begin(); pos != builtInFunctions.end(); ++pos)
-                delete pos->second;
+                pos->second->setCleanUpNeeded(true);
         }
 
         std::map<QString, QString> QTCalc::getFuncs() const throw()
