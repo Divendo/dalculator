@@ -135,7 +135,7 @@ namespace calc
         }
 
         bool calc::functionExists(const string& name) const
-        { return calc::currFunctions.count(name); }
+        { return calc::currFunctions.count(name) != 0; }
 
         const functionList* calc::getFunctions() const
         { return &calc::currFunctions; }
@@ -179,11 +179,14 @@ namespace calc
                         continue;
                     }
                 }
-                else if(isWhitespace(*pos))
+
+                // We check for whitespace characters here as the only token that does not simply ignore whitespaces is a name token
+                if(isWhitespace(*pos))
                 {
                     tokens.push_back(Token(Token::tokenWhitespace, *pos));
                     continue;
                 }
+
                 if(currType == Token::tokenReal)
                 {
                     // If the following conditions are all true, the end of the real value is found
@@ -211,21 +214,33 @@ namespace calc
                     if(*pos == '-')                                             // In case of a minus we need to find out whether it's unary or not
                     {
                         // Find out whether the minus is an unary minus or not
-                        bool unaryMin = !tokens.size();                         // If the size of the tokens list is 0, it's an unary minus for sure
+                        bool unaryMin = tokens.size() == 0;                     // If the size of the tokens list is 0, it's an unary minus for sure
                         if(!unaryMin)                                           // If it isn't an unary minus for sure, we'll have to find out if it is
                         {
-                            switch(tokens.back().type)                          // For finding out, we're looking at the type of the last token
-                            {
-                                case Token::tokenOperator:                      // After an operator,
-                                case Token::tokenComma:                         // comma,
-                                case Token::tokenOpenBracket:                   // opening bracket
-                                case Token::tokenAssignmentOperator:            // or assignment operator
-                                    unaryMin = true;                            // It's an unary minus for sure
-                                break;
+                            // Find out the last token that was not a whitespace
+                            std::vector<Token>::const_reverse_iterator lastToken = tokens.rbegin();
+                            while(lastToken != tokens.rend() && lastToken->type == Token::tokenWhitespace)
+                                ++lastToken;
 
-                                default:                                        // Otherwise it's a regular binary minus
-                                    tokens.push_back(Token(Token::tokenOperator, "-"));
-                                break;
+                            // If we have only encountered whitespaces so far, we are dealing with an unary minus
+                            if(lastToken == tokens.rend())
+                                unaryMin = true;
+                            else
+                            {
+                                // Otherwise we have to find out by looking at the type of the last non-whitespace token
+                                switch(lastToken->type)
+                                {
+                                    case Token::tokenOperator:                      // After an operator,
+                                    case Token::tokenComma:                         // comma,
+                                    case Token::tokenOpenBracket:                   // opening bracket
+                                    case Token::tokenAssignmentOperator:            // or assignment operator
+                                        unaryMin = true;                            // It's an unary minus for sure
+                                    break;
+
+                                    default:                                        // Otherwise it's a regular binary minus
+                                        tokens.push_back(Token(Token::tokenOperator, "-"));
+                                    break;
+                                }
                             }
                         }
 
