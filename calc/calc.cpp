@@ -62,7 +62,7 @@ namespace calc
 
         // Functions for the variables
         bool calc::deleteVar(const string& name)
-        { return calc::currVars.erase(name); }
+        { return calc::currVars.erase(name) != 0; }
 
         real& calc::setVar(const string& name, const real& value)
         { return calc::currVars[name] = value; }
@@ -92,7 +92,7 @@ namespace calc
         }
 
         bool calc::varExists(const string& name) const
-        { return calc::currVars.count(name); }
+        { return calc::currVars.count(name) != 0; }
 
         const varList* calc::getVars() const
         { return &calc::currVars; }
@@ -102,7 +102,7 @@ namespace calc
         {
             if(calc::currFunctions[name]->cleanUpNeeded())
                 delete calc::currFunctions[name];
-            return calc::currFunctions.erase(name);
+            return calc::currFunctions.erase(name) != 0;
         }
 
         void calc::setFunction(const string& name, mathFunction* function)
@@ -562,13 +562,13 @@ namespace calc
                 if(firstStrPart.size() == 1)
                     return chr == 'x' || chr == 'X' || chr == '.' || chr == ':' || chr == 'e' || chr == 'E' || std::isdigit(chr);
                 else if(firstStrPart[1] == 'x' || firstStrPart[1] == 'X')
-                    return std::isxdigit(chr);
+                    return std::isxdigit(chr) != 0;
             }
             return chr == '.' || chr == ':' || chr == 'e' || chr == 'E' || std::isdigit(chr);
         }
 
         bool calc::isWhitespace(const char& chr) const
-        { return std::isspace(chr); }
+        { return std::isspace(chr) != 0; }
 
         real calc::tokenToValue(const Token& token) const
         try
