@@ -9,4 +9,7 @@
         <file alias="nl.gif">resources/icons/nl.gif</file>
         <file alias="dalculator.ico">resources/icons/dalculator.ico</file>
     </qresource>
+    <qresource prefix="/qt/etc">
+        <file alias="qt.conf">resources/qt.conf</file>
+    </qresource>
 </RCC>
