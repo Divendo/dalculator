@@ -63,6 +63,8 @@
             builtInFunctions["ATAN"]    = new QTCalcMemberMathFunction(&QTCalc::atan, this, false);
             builtInFunctions["TANH"]    = new QTCalcMemberMathFunction(&QTCalc::tanh, this, false);
             builtInFunctions["AVG"]     = new QTCalcMemberMathFunction(&QTCalc::avg, this, false);
+            builtInFunctions["NCR"]     = new QTCalcMemberMathFunction(&QTCalc::ncr, this, false);
+            builtInFunctions["NPR"]     = new QTCalcMemberMathFunction(&QTCalc::npr, this, false);
             builtInFunctions["cos"]     = new QTCalcMemberMathFunction(&QTCalc::cos, this, false);
             builtInFunctions["acos"]    = new QTCalcMemberMathFunction(&QTCalc::acos, this, false);
             builtInFunctions["cosh"]    = new QTCalcMemberMathFunction(&QTCalc::cosh, this, false);
@@ -73,6 +75,8 @@
             builtInFunctions["atan"]    = new QTCalcMemberMathFunction(&QTCalc::atan, this, false);
             builtInFunctions["tanh"]    = new QTCalcMemberMathFunction(&QTCalc::tanh, this, false);
             builtInFunctions["avg"]     = new QTCalcMemberMathFunction(&QTCalc::avg, this, false);
+            builtInFunctions["ncr"]     = new QTCalcMemberMathFunction(&QTCalc::ncr, this, false);
+            builtInFunctions["npr"]     = new QTCalcMemberMathFunction(&QTCalc::npr, this, false);
 
             builtInFunctions["RAND"]    = new calc::preDefinedMathFunction(mathFunctions::random, false);
             builtInFunctions["IF"]      = new calc::preDefinedMathFunction(mathFunctions::ifFunction, false);
@@ -425,6 +429,8 @@
                         msg = tr("To less arguments: %1 given, %2 expected in function %3").arg(err.extraRealInfo[0]).arg(err.extraRealInfo[1]).arg(err.extraStringInfo[0].c_str());
                     else if(err.msg == "Too many arguments")
                         msg = tr("To many arguments: %1 given, %2 expected in function %3").arg(err.extraRealInfo[0]).arg(err.extraRealInfo[1]).arg(err.extraStringInfo[0].c_str());
+                    else if(err.msg == "Only integers allowed")
+                        msg = tr("Only integer arguments are allowed in function %1").arg(err.extraStringInfo[0].c_str());
                     else
                         msg = tr("Invalid argument: %1, given to function %2").arg(err.extraRealInfo[0]).arg(err.extraStringInfo[0].c_str());
                 break;
@@ -577,7 +583,6 @@
             return std::atan(args[0]);
         }
 
-
         calc::real QTCalc::avg(const calc::argList& args)
         {
             if(args.size() == 0)
@@ -591,6 +596,59 @@
             for(calc::real arg : args)
                 total += arg;
             return total / args.size();
+        }
+
+        calc::real QTCalc::ncr(const calc::argList& args)
+        {
+            if(args.size() != 2)
+            {
+                calc::calcError err(args.size() > 2 ? "Too many arguments" : "Too less arguments", calc::calcError::invalidArguments, args.size());
+                err.extraRealInfo.push_back(2);
+                throw err;
+            }
+
+            if(std::floor(args[0]) != args[0] || std::floor(args[1]) != args[1])
+                throw calc::calcError("Only integers allowed", calc::calcError::invalidArguments);
+
+            if(args[0] < args[1] || args[1] < 0)
+                return 0;
+
+            unsigned int n = args[0];
+            unsigned int k = args[1];
+
+            unsigned int numerator = 1;
+            for(unsigned int i = n - k + 1; i <= n; ++i)
+                numerator *= i;
+            unsigned int denominator = 1;
+            for(unsigned int i = 1; i <= k; ++i)
+                denominator *= i;
+            return static_cast<calc::real>(numerator) / denominator;
+
+        }
+
+        calc::real QTCalc::npr(const calc::argList& args)
+        {
+            if(args.size() != 2)
+            {
+                calc::calcError err(args.size() > 2 ? "Too many arguments" : "Too less arguments", calc::calcError::invalidArguments, args.size());
+                err.extraRealInfo.push_back(2);
+                throw err;
+            }
+
+            if(std::floor(args[0]) != args[0] || std::floor(args[1]) != args[1])
+                throw calc::calcError("Only integers allowed", calc::calcError::invalidArguments);
+
+            if(args[0] < args[1] || args[1] < 0)
+                return 0;
+
+            unsigned int n = args[0];
+            unsigned int k = args[1];
+
+            unsigned int result = 1;
+            for(unsigned int i = n - k + 1; i <= n; ++i)
+                result *= i;
+
+            return result;
         }
 
 // class QTCalcMemberMathFunction:
